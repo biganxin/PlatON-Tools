@@ -1,9 +1,9 @@
 from functools import wraps
 
-from client_sdk_python import Web3
-from client_sdk_python.contract import ContractFunction
-from client_sdk_python.packages.platon_account.signers.local import LocalAccount
-from client_sdk_python.utils.abi import filter_by_name
+from platon import Web3
+from platon.contract import ContractFunction
+from platon.packages.platon_account.signers.local import LocalAccount
+from platon.utils.abi import filter_by_name
 
 
 def deploy(web3: Web3, bytecode: str, abi: str, account: LocalAccount, **constructor_args):

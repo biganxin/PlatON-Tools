@@ -1,8 +1,8 @@
 import logging
 from threading import currentThread
-from client_sdk_python import Web3
-from client_sdk_python.eth import PlatON
-from client_sdk_python.ppos import Ppos
+from platon import Web3
+from platon.platon import PlatON
+from platon.ppos import Ppos
 from hexbytes import HexBytes
 from account import Account
 from setting import main_private_key, load_amount, chain_id, rpc, provider, main_nonce

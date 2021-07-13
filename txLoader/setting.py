@@ -1,4 +1,4 @@
-from client_sdk_python import Web3, HTTPProvider, WebsocketProvider
+from platon import Web3, HTTPProvider, WebsocketProvider
 
 # 链基础设置
 # rpc = 'ws://106.13.70.56:6791'

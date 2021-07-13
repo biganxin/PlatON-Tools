@@ -1,7 +1,7 @@
 from random import randint, uniform, sample
 
 import click
-from client_sdk_python import Web3, HTTPProvider, eth as Eth, ppos as Ppos, admin as Admin, debug as Debug
+from platon import Web3, HTTPProvider, platon as PlatON, ppos as Ppos, admin as Admin, debug as Debug
 from hexbytes import HexBytes
 from ruamel import yaml
 
@@ -11,7 +11,7 @@ main_account_prikey = 'f90fd6808860fe869631d978b0582bb59db6189f7908b578a886d582c
 cdf_account = 'lat1kvurep20767ahvrkraglgd9t34w0w2g059pmlx'
 
 w3 = Web3(HTTPProvider(w3_url), chain_id=chain_id)
-platon = Eth.Eth(w3)
+platon = PlatON.PlatON(w3)
 ppos = Ppos.Ppos(w3)
 debug = Debug.Debug(w3)
 
@@ -84,7 +84,7 @@ def submit_staking(type: int, w3_url, node_id, staking_private_key, benifit_addr
         type: 0, 1
     """
     s_w3 = Web3(HTTPProvider(w3_url), chain_id=chain_id)
-    s_platon = Eth.PlatON(s_w3)
+    s_platon = PlatON.PlatON(s_w3)
     s_ppos = Ppos.Ppos(s_w3)
     s_admin = Admin.Admin(s_w3)
     program_version = s_admin.getProgramVersion()['Version']

@@ -1,5 +1,6 @@
 loguru==0.5.1
 click==6.6
 hexbytes==0.1.0
-client_sdk_python
+platon.py==1.1.0
 ruamel.base==1.0.0
+rlp~=1.1.0

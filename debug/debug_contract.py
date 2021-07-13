@@ -1,5 +1,5 @@
 
-from client_sdk_python import Account
+from platon import Account
 
 from keyParser.key import hex_address_to_bech32_address
 from simple_evm import deploy, Contract
