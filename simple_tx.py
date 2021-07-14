@@ -112,7 +112,7 @@ class SimpleTx:
     # 锁仓交易
     def restricting(self, from_private_key, to_address, restricting_plan, tx_cfg=None):
         result = self.ppos.createRestrictingPlan(to_address, restricting_plan, from_private_key, tx_cfg)
-        logger.info(f"restricting result = {result['code']}")
+        logger.info(f"restricting result = {result['code']}, {result}")
         return result
 
     # 创建质押
