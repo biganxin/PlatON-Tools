@@ -31,7 +31,7 @@ class SimpleTx:
 
     # 创建账户
     def create_account(self):
-        account = self.platon.account.create()
+        account = self.platon.account.create(net_type=self.hrp)
         address = account.address
         private_key = account.privateKey.hex()[2:]
         logger.info(f"create account = {address}, {private_key}")

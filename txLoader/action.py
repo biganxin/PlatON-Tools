@@ -2,9 +2,9 @@ import random
 
 from hexbytes import HexBytes
 
-from setting import main_address, chain_id
-from user import User
-from utils import delegable_nodes, get_delegate_list_for_node, get_cfg
+from txLoader.setting import main_address, chain_id
+from txLoader.user import User
+from txLoader.utils import delegable_nodes, get_delegate_list_for_node, get_cfg
 
 
 class Action(User):

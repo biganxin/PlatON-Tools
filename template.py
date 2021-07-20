@@ -2,18 +2,22 @@ from simple_tx import SimpleTx
 from platon import Web3, HTTPProvider
 
 # 准备
-# rpc = 'http://10.0.0.11:7789'
-rpc = 'http://192.168.120.121:6789'
+rpc = 'http://10.0.0.11:6789'
+# rpc = 'http://192.168.120.121:6789'
 # main_address, main_private_key = 'lat1fyeszufxwxk62p46djncj86rd553skppy4qgz4', 'a11859ce23effc663a9460e332ca09bd812acc390497f8dc7542b6938e13f8d7'
 tx = SimpleTx(rpc)
 tx.ppos.need_quota_gas = False
 tx.pip.need_quota_gas = False
 
+print(tx.decode_rlp(bytes.fromhex('c786333031313131')))
+
 # print(tx.hrp)
 # print(tx.platon.chainId)
-print(tx.admin.getProgramVersion())
-print(tx.pip.getActiveVersion())
-print(tx.pip.getGovernParamValue('restricting', 'minimumRelease'))
+# print(tx.admin.getProgramVersion())
+# print(tx.pip.getActiveVersion())
+# print(tx.pip.getGovernParamValue('restricting', 'minimumRelease'))
+# print(tx.pip.getActiveVersion())
+
 
 # **** 交易模块 ****
 # to_address, to_private_key = tx.create_account()
