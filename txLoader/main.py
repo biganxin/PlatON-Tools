@@ -70,7 +70,7 @@ if __name__ == "__main__":
         time.sleep(1)
         thread.start()
         logging.info(f'thread [{thread.name}] Started!')
-    logging.info(f'loader is running at {web3.eth.blockNumber}, please waiting...')
+    logging.info(f'loader is running at {web3.platon.blockNumber}, please waiting...')
     logging.info(f'(ps: you can see more from the threads log)')
     # 启动查询线程
     t = Thread(target=get_count, name=f'Tc')
