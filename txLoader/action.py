@@ -60,7 +60,7 @@ class Action(User):
             'RestrictingPlanHes']
         amount = random.randint(10 * 10 ** 18, max_amount)
         self.logger.info(f"node: {node_id}, block_number: {block_number}, amount: {amount}")
-        result = self.ppos.withdrewDelegate(block_number, node_id, amount, account.private_key,
+        result = self.ppos.withdrewDelegation(block_number, node_id, amount, account.private_key,
                                             get_cfg("nonce", account.nonce))
         self.undelegate_counter += 1
         return result['hash']
